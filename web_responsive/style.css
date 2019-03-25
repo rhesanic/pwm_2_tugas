@@ -1,0 +1,53 @@
+/*.container {
+  background: #eee;
+  overflow: auto;
+}
+
+.container .col {
+    width: 50%;
+    padding: 30px 3.15% 0;
+    float: left;
+}
+/* dari 1 kolom adalah 50% dan untuk lebar 100% karena akan menjadi 2 kolom yang ada pada tampilan halaman */
+/*@media screen and (max-width: 50rem) {
+.container .col {
+	width: 90%;
+	}
+}
+*/
+/* 1rem = 16px maka 48rem = 800px
+untuk pengaturan diatas adalah mengatur tampilan media query dan max lebar viewport adalah 48rem, 
+maka secara responsive tampilan dari web lebarnya akan berubah menjadi 90%. lebar 90% mempengaruhi bagian 
+container dan bagian col*/
+.container	{
+		display:	-webkit-box;		/*	OLD	-	iOS	6-,	Safari	3.1-6	*/
+		/*untuk menggunakan os ios dan safari menggunakan webkit-box*/
+		display:	-ms-flexbox;		/*	TWEENER	-	IE	10	*/
+		/*untuk menggunakan internet explorer menggunakan ms-flexbox*/
+		display:	flex;				/*	NEW,	Spec	-	Firefox,	Chrome,	Opera	*/
+		/*untuk menggunakan firefox, chrome, dan opera menggunakan flex*/
+		background:	#eee;
+		/*untuk pengaturan pada background menggunakan warna #eee, kede warna tersebut menghasilkan warna grayscale*/
+		overflow:	auto;
+		/*over flow pada page ini diatur agar konten yang berlebih akan dengan scroll*/
+}
+
+.container	.col	{
+		flex:	1;
+		padding:	1rem;
+}
+	/*pada pengaturan untuk container dan col dibuat agar flex 1, yaitu agar dapat fleksibel dengan lebar 1 kolom. 
+	kemudian padding diatur dengan lebar 1 rem atau 16px */
+	
+@media	screen	and	(max-width:	50rem)	{
+		.container	{
+				display:	-webkit-box;
+				display:	-ms-flexbox;
+				display:	flex;
+				flex-flow:	column;
+		}
+}
+/* 1rem = 16px maka 50rem = 800px
+untuk pengaturan diatas adalah mengatur tampilan media query dan max lebar viewport adalah 48rem, 
+maka secara responsive tampilan dari web lebarnya menysuaikan dengan browser atau os yang sedang 
+digunakan untuk membukan web page tersbut*/
